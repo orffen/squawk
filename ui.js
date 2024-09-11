@@ -4,8 +4,6 @@ function squawkCodeButton() {
     document.getElementById("squawkCode").textContent = generateSquawk();
 }
 
-squawkCodeButton();
-
 function icaoButton() {
     const proxyUrl = "https://cors-proxy.fringe.zone/"; // required for CORS, need a better solution
     const apiUrl = "https://aviationweather.gov/api/data/metar?taf=true&ids=";
@@ -21,7 +19,6 @@ function icaoButton() {
         return response.text();
     })
     .then((text) => {
-        console.log(text);
         document.getElementById("metar").value = text;
     })
     .catch((error) => {
@@ -45,3 +42,14 @@ function updateTOD() {
     fpm > 0 ? document.getElementById("todDescentRate").innerText = `${fpm.toFixed(0)} fpm` : document.getElementById("todDescentRate").innerHTML = "&nbsp;";
     distance > 0 ? document.getElementById("todDistanceReq").innerText = `${distance.toFixed(1)} nm` : document.getElementById("todDistanceReq").innerHTML = "&nbsp;";
 }
+
+
+squawkCodeButton(); // generate a random Squawk code immediately on load
+
+// when enter is pressed in the icao code list, retrieve METAR
+document.getElementById("icaoInput").addEventListener("keyup", (event) => {
+    if (event.key == "Enter") {
+        icaoButton();
+        document.getElementById("icaoButton").focus();
+    }
+})
