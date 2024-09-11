@@ -6,6 +6,33 @@ function squawkCodeButton() {
 
 squawkCodeButton();
 
+function icaoButton() {
+    const proxyUrl = "https://cors-proxy.fringe.zone/"; // required for CORS, need a better solution
+    const apiUrl = "https://aviationweather.gov/api/data/metar?taf=true&ids=";
+    const regex = /\s+/g;
+    let params = document.getElementById("icaoInput").value.replace(regex, ",");
+    document.getElementById("icaoInput").value = params;
+    fetch(`${proxyUrl}${apiUrl}${params}`)
+    .then((response) => {
+        console.log(response);
+        if (!response.ok) {
+            throw new Error(`HTTP error: ${response.status}`);
+        }
+        return response.text();
+    })
+    .then((text) => {
+        console.log(text);
+        document.getElementById("metar").value = text;
+    })
+    .catch((error) => {
+        document.getElementById("metar").value = error;
+    });
+}
+
+function icaoInput() {
+    document.getElementById("icaoInput").value = document.getElementById("icaoInput").value.toUpperCase();
+}
+
 function updateTOD() {
     let tod_values = {
         angle: Number(document.getElementById("todAngle").value),

@@ -32,7 +32,7 @@
     grid-column: 1;
 }
 
-#metarBox #icao {
+#metarBox #icaoInput {
     grid-column: 2;
     width: 100%;
 }
@@ -45,6 +45,7 @@
     box-sizing: border-box;
     grid-row: 2;
     grid-column: span 3;
+    resize: none;
     height: 100%;
     width: 100%;
 }

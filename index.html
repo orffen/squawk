@@ -37,9 +37,9 @@
             <fieldset id="metarBox">
                 <legend>METAR/TAF</legend>
                 <span id="icaoLabel">ICAO:</span>
-                <input id="icao" type="text">
-                <button id="icaoButton">Refresh</button>
-                <textarea disabled rows="5"></textarea>
+                <input id="icaoInput" type="text" autocomplete="off" spellcheck="false" oninput="icaoInput()">
+                <button id="icaoButton" onclick="icaoButton()">Refresh</button>
+                <textarea id="metar" disabled rows="5"></textarea>
             </fieldset>
             <p class="warningText">FOR FLIGHT SIMULATION USE ONLY</p>
         </main>
