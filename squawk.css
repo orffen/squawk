@@ -24,7 +24,7 @@
     display: grid;
     gap: 5px;
     grid-template-columns: 6ch 1fr 9ch;
-    grid-template-rows: 2ch 1fr;
+    grid-template-rows: 1.5em 1fr;
     place-items: center;
 }
 
@@ -97,7 +97,6 @@
 fieldset {
     border: 1px solid;
 }
-
 
 label {
     text-align: center;
