@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
+        <meta charset="utf-8">
         <title>Squawk!</title>
         <link rel="icon" href="squawk.ico" type="image/x-icon">
         <link rel="stylesheet" href="squawk.css">
@@ -21,8 +22,8 @@
                         <input id="todAngle" value="3" type="number" oninput="updateTOD()">
                         <label for="todGroundSpeed">Ground Speed (kts)</label>
                         <input id="todGroundSpeed" type="number" oninput="updateTOD()">
-                        <label for="todDescentRate">Descent Rate</label>
-                        <span id="todDescentRate">&nbsp;</span>
+                        <span>Descent Rate</span>
+                        <span id="todDescentRate" class="result">&nbsp;</span>
                     </div>
                     <div>
                         <!-- right side -->
@@ -30,8 +31,8 @@
                         <input id="todCurrentAlt" type="number" oninput="updateTOD()">
                         <label for="todTargetAlt">Target Altitude</label>
                         <input id="todTargetAlt" type="number" oninput="updateTOD()">
-                        <label for="todDistanceReq">Distance Required</label>
-                        <span id="todDistanceReq">&nbsp;</span>
+                        <span>Distance Required</span>
+                        <span id="todDistanceReq" class="result">&nbsp;</span>
                     </div>
                 </fieldset>
             </div>

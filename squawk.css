@@ -90,8 +90,11 @@
 }
 
 #todBox span {
-    font-weight: bold;
     text-align: center;
+}
+
+#todBox span.result {
+    font-weight: bold;
 }
 
 fieldset {
@@ -103,5 +106,5 @@ label {
 }
 
 main {
-    width: 600px;
+    max-width: 600px;
 }
