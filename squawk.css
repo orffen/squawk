@@ -81,6 +81,11 @@
     flex-direction: column;
 }
 
+#todBox span {
+    font-weight: bold;
+    text-align: center;
+}
+
 fieldset {
     border: 1px solid;
 }

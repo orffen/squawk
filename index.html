@@ -17,20 +17,20 @@
                     <div>
                         <!-- left side -->
                         <label for="todAngle">Descent Angle (°)</label>
-                        <input id="todAngle" value="3" type="number">
+                        <input id="todAngle" value="3" type="number" oninput="updateTOD()">
                         <label for="todGroundSpeed">Ground Speed (kts)</label>
-                        <input id="todGroundSpeed" type="number">
+                        <input id="todGroundSpeed" type="number" oninput="updateTOD()">
                         <label for="todDescentRate">Descent Rate</label>
-                        <span id="todDescentRate" type="number">&nbsp;</span>
+                        <span id="todDescentRate">&nbsp;</span>
                     </div>
                     <div>
                         <!-- right side -->
                         <label for="todCurrentAlt">Current Altitude</label>
-                        <input id="todCurrentAlt" type="number">
+                        <input id="todCurrentAlt" type="number" oninput="updateTOD()">
                         <label for="todTargetAlt">Target Altitude</label>
-                        <input id="todTargetAlt" type="number">
+                        <input id="todTargetAlt" type="number" oninput="updateTOD()">
                         <label for="todDistanceReq">Distance Required</label>
-                        <span id="todDistanceReq" type="number">&nbsp;</span>
+                        <span id="todDistanceReq">&nbsp;</span>
                     </div>
                 </fieldset>
             </div>
@@ -47,4 +47,4 @@
         <script src="tod.js"></script>
         <script src="ui.js"></script>
     </body>
-    </html>
+</html>
