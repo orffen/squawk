@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Squawk!</title>
+        <link rel="stylesheet" href="squawk.css">
+    </head>
+    <body>
+        <main>
+            <div class="hbox">
+                <fieldset id="squawkBox">
+                    <legend>Squawk</legend>
+                    <span id="squawkCode">1200</span>
+                    <button id="squawkCodeButton" onclick="squawkCodeButton()">Get new</button>
+                </fieldset>
+                <fieldset id="todBox">
+                    <legend>Top of Descent Calculator</legend>
+                    <div>
+                        <!-- left side -->
+                        <label for="todAngle">Descent Angle (°)</label>
+                        <input id="todAngle" value="3" type="number">
+                        <label for="todGroundSpeed">Ground Speed (kts)</label>
+                        <input id="todGroundSpeed" type="number">
+                        <label for="todDescentRate">Descent Rate</label>
+                        <span id="todDescentRate" type="number">&nbsp;</span>
+                    </div>
+                    <div>
+                        <!-- right side -->
+                        <label for="todCurrentAlt">Current Altitude</label>
+                        <input id="todCurrentAlt" type="number">
+                        <label for="todTargetAlt">Target Altitude</label>
+                        <input id="todTargetAlt" type="number">
+                        <label for="todDistanceReq">Distance Required</label>
+                        <span id="todDistanceReq" type="number">&nbsp;</span>
+                    </div>
+                </fieldset>
+            </div>
+            <fieldset id="metarBox">
+                <legend>METAR/TAF</legend>
+                <span id="icaoLabel">ICAO:</span>
+                <input id="icao" type="text">
+                <button id="icaoButton">Refresh</button>
+                <textarea disabled rows="5"></textarea>
+            </fieldset>
+            <p class="warningText">FOR FLIGHT SIMULATION USE ONLY</p>
+        </main>
+        <script src="squawk.js"></script>
+        <script src="tod.js"></script>
+        <script src="ui.js"></script>
+    </body>
+    </html>

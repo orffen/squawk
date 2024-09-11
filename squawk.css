@@ -1,0 +1,94 @@
+:root {
+    color-scheme: dark;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.hbox {
+    display: flex;
+    flex-direction: row;
+}
+
+.vbox {
+    display: flex;
+    flex-direction: column;
+}
+
+.warningText {
+    color: red;
+    font-size: small;
+    font-weight: bold;
+    text-align: center;
+}
+
+#metarBox {
+    display: grid;
+    gap: 5px;
+    grid-template-columns: 6ch 1fr 9ch;
+    grid-template-rows: 1fr 3fr;
+    place-items: center;
+}
+
+#metarBox #icaoLabel {
+    grid-column: 1;
+}
+
+#metarBox #icao {
+    grid-column: 2;
+    width: 100%;
+}
+
+#metarBox #icaoButton {
+    grid-column: 3;
+}
+
+#metarBox textarea {
+    box-sizing: border-box;
+    grid-row: 2;
+    grid-column: span 3;
+    height: 100%;
+    width: 100%;
+}
+
+#squawkBox {
+    display: grid;
+    gap: 5px;
+    grid-template-rows: 3fr 2fr;
+    place-items: center;
+}
+
+#squawkBox span {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    grid-row: 1;
+}
+
+#squawkBox button {
+    grid-row: 2;
+    height: 100%;
+    width: 100%;
+}
+
+#todBox {
+    display: grid;
+    gap: 5px;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+}
+
+#todBox div {
+    display: flex;
+    flex-direction: column;
+}
+
+fieldset {
+    border: 1px solid;
+}
+
+input {
+    text-align: center;
+}
+
+label {
+    text-align: center;
+}
