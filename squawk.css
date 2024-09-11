@@ -24,7 +24,7 @@
     display: grid;
     gap: 5px;
     grid-template-columns: 6ch 1fr 9ch;
-    grid-template-rows: 1fr 3fr;
+    grid-template-rows: 2ch 1fr;
     place-items: center;
 }
 
@@ -43,11 +43,14 @@
 
 #metarBox textarea {
     box-sizing: border-box;
+    font-family: monospace;
+    font-size: larger;
     grid-row: 2;
     grid-column: span 3;
-    resize: none;
-    height: 100%;
-    width: 100%;
+    min-height: 6em;
+    min-width: 570px;
+    resize: both;
+    width: 570px;
 }
 
 #squawkBox {
@@ -98,4 +101,8 @@ fieldset {
 
 label {
     text-align: center;
+}
+
+main {
+    width: 600px;
 }
