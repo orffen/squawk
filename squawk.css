@@ -81,6 +81,10 @@
     flex-direction: column;
 }
 
+#todBox input {
+    text-align: center;
+}
+
 #todBox span {
     font-weight: bold;
     text-align: center;
@@ -90,9 +94,6 @@ fieldset {
     border: 1px solid;
 }
 
-input {
-    text-align: center;
-}
 
 label {
     text-align: center;
