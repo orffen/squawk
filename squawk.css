@@ -106,5 +106,6 @@ label {
 }
 
 main {
+    border: auto;
     max-width: 600px;
 }
