@@ -5,14 +5,13 @@ function squawkCodeButton() {
 }
 
 function icaoButton() {
-    const proxyUrl = "https://cors-proxy.fringe.zone/"; // required for CORS, need a better solution
+    const proxyUrl = "https://corsproxy.io/?"; // required for CORS, need a better solution
     const apiUrl = "https://aviationweather.gov/api/data/metar?taf=true&ids=";
     const regex = /\s+/g;
     let params = document.getElementById("icaoInput").value.replace(regex, ",");
     document.getElementById("icaoInput").value = params;
-    fetch(`${proxyUrl}${apiUrl}${params}`)
+    fetch(`${proxyUrl}${encodeURIComponent(apiUrl)}${params}`)
     .then((response) => {
-        console.log(response);
         if (!response.ok) {
             throw new Error(`HTTP error: ${response.status}`);
         }
