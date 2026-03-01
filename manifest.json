@@ -3,7 +3,7 @@
   "name": "Squawk!",
   "short_name": "Squawk!",
   "description": "A small toolbox for flight simulation.",
-  "start_url": "/index.html",
+  "start_url": "/squawk/index.html",
   "scope": "/",
   "display": "standalone",
   "orientation": "landscape",

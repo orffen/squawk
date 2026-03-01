@@ -1,4 +1,4 @@
-const CACHE_NAME = "squawk-1cb22f3";
+const CACHE_NAME = "squawk-b742553";
 const ASSETS = [
     "index.html",
     "manifest.json",
