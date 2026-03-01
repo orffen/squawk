@@ -27,13 +27,20 @@ function isValidSquawk(code) {
     if (RESERVED_CODES.includes(code_as_int)) {
         return false;
     }
-    if ((41 <= code_as_int && code_as_int <= 57)
-        || (100 <= code_as_int && code_as_int <= 700)
-        || (1200 <= code_as_int && code_as_int <= 1277)
-        || (4400 <= code_as_int && code_as_int <= 4477)
-        || (7501 <= code_as_int && code_as_int <= 7577))
-    {
+    if (
+        (41 <= code_as_int && code_as_int <= 57) ||
+        (100 <= code_as_int && code_as_int <= 700) ||
+        (1200 <= code_as_int && code_as_int <= 1277) ||
+        (4400 <= code_as_int && code_as_int <= 4477) ||
+        (7501 <= code_as_int && code_as_int <= 7577)
+    ) {
         return false;
     }
     return true;
+}
+
+if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+        navigator.serviceWorker.register("sw.js").catch((err) => console.error("Service Worker failed:", err));
+    });
 }
