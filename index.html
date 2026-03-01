@@ -47,13 +47,15 @@
                     </div>
                 </fieldset>
             </div>
-            <fieldset id="metarBox">
-                <legend>METAR/TAF</legend>
-                <span id="icaoLabel">ICAO:</span>
-                <input id="icaoInput" type="text" autocomplete="off" spellcheck="false" oninput="icaoInput()" />
-                <button id="icaoButton" onclick="icaoButton()">Refresh</button>
-                <textarea id="metar" disabled></textarea>
-            </fieldset>
+            <div class="hbox">
+                <fieldset id="metarBox">
+                    <legend>METAR/TAF</legend>
+                    <span id="icaoLabel">ICAO:</span>
+                    <input id="icaoInput" type="text" autocomplete="off" spellcheck="false" oninput="icaoInput()" />
+                    <button id="icaoButton" onclick="icaoButton()">Refresh</button>
+                    <textarea id="metar" disabled></textarea>
+                </fieldset>
+            </div>
             <p class="warningText">FOR FLIGHT SIMULATION USE ONLY</p>
         </main>
     </body>

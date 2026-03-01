@@ -1,10 +1,6 @@
 :root {
     color-scheme: dark;
-    font-family:
-        system-ui,
-        -apple-system,
-        BlinkMacSystemFont,
-        sans-serif;
+    font-family: system-ui, sans-serif;
 }
 
 .hbox {
@@ -25,11 +21,12 @@
 }
 
 #metarBox {
+    box-sizing: border-box;
     display: grid;
     gap: 5px;
-    grid-template-columns: 6ch 1fr 9ch;
-    grid-template-rows: 1.5em 1fr;
-    place-items: center;
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: auto 1fr;
+    width: 100%;
 }
 
 #metarBox #icaoLabel {
@@ -38,7 +35,6 @@
 
 #metarBox #icaoInput {
     grid-column: 2;
-    width: 100%;
 }
 
 #metarBox #icaoButton {
@@ -49,12 +45,11 @@
     box-sizing: border-box;
     font-family: monospace;
     font-size: larger;
-    grid-row: 2;
     grid-column: span 3;
+    grid-row: 2;
     min-height: 6em;
-    min-width: 570px;
-    resize: both;
-    width: 570px;
+    resize: vertical;
+    width: 100%;
 }
 
 #squawkBox {
@@ -69,6 +64,7 @@
     font-weight: bold;
     text-align: center;
     grid-row: 1;
+    width: 5ch;
 }
 
 #squawkBox button {
@@ -90,7 +86,9 @@
 }
 
 #todBox input {
+    align-self: center;
     text-align: center;
+    width: 15ch;
 }
 
 #todBox span {
@@ -110,6 +108,7 @@ label {
 }
 
 main {
-    border: auto;
-    max-width: 600px;
+    margin: auto;
+    max-width: 95vw;
+    width: fit-content;
 }
