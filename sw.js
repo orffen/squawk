@@ -1,5 +1,18 @@
 const CACHE_NAME = "squawk-7856ade";
-const ASSETS = ["index.html", "manifest.json", "squawk.css", "squawk.ico", "squawk.js", "sw.js", "tod.js", "ui.js"];
+const ASSETS = [
+    "index.html",
+    "manifest.json",
+    "icon-16.png",
+    "icon-32.png",
+    "icon-192.png",
+    "icon-512.png",
+    "squawk.css",
+    "squawk.ico",
+    "squawk.js",
+    "sw.js",
+    "tod.js",
+    "ui.js",
+];
 
 self.addEventListener("install", (event) => {
     self.skipWaiting();

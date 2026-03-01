@@ -1,10 +1,21 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
     <head>
-        <meta charset="utf-8">
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-title" content="Squawk!" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <link rel="manifest" href="manifest.json" />
+        <link rel="apple-touch-icon" href="icon-192.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="icon-32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="icon-16.png" />
+        <link rel="stylesheet" href="squawk.css" />
         <title>Squawk!</title>
-        <link rel="icon" href="squawk.ico" type="image/x-icon">
-        <link rel="stylesheet" href="squawk.css">
+        <script src="squawk.js" defer></script>
+        <script src="tod.js"></script>
+        <script src="ui.js" defer></script>
     </head>
     <body>
         <main>
@@ -19,18 +30,18 @@
                     <div>
                         <!-- left side -->
                         <label for="todAngle">Descent Angle (°)</label>
-                        <input id="todAngle" value="3" type="number" oninput="updateTOD()">
+                        <input id="todAngle" value="3" type="number" oninput="updateTOD()" />
                         <label for="todGroundSpeed">Ground Speed (kts)</label>
-                        <input id="todGroundSpeed" type="number" oninput="updateTOD()">
+                        <input id="todGroundSpeed" type="number" oninput="updateTOD()" />
                         <span>Descent Rate</span>
                         <span id="todDescentRate" class="result">&nbsp;</span>
                     </div>
                     <div>
                         <!-- right side -->
                         <label for="todCurrentAlt">Current Altitude</label>
-                        <input id="todCurrentAlt" type="number" oninput="updateTOD()">
+                        <input id="todCurrentAlt" type="number" oninput="updateTOD()" />
                         <label for="todTargetAlt">Target Altitude</label>
-                        <input id="todTargetAlt" type="number" oninput="updateTOD()">
+                        <input id="todTargetAlt" type="number" oninput="updateTOD()" />
                         <span>Distance Required</span>
                         <span id="todDistanceReq" class="result">&nbsp;</span>
                     </div>
@@ -39,14 +50,11 @@
             <fieldset id="metarBox">
                 <legend>METAR/TAF</legend>
                 <span id="icaoLabel">ICAO:</span>
-                <input id="icaoInput" type="text" autocomplete="off" spellcheck="false" oninput="icaoInput()">
+                <input id="icaoInput" type="text" autocomplete="off" spellcheck="false" oninput="icaoInput()" />
                 <button id="icaoButton" onclick="icaoButton()">Refresh</button>
                 <textarea id="metar" disabled></textarea>
             </fieldset>
             <p class="warningText">FOR FLIGHT SIMULATION USE ONLY</p>
         </main>
-        <script src="squawk.js"></script>
-        <script src="tod.js"></script>
-        <script src="ui.js"></script>
     </body>
 </html>
